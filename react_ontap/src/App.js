@@ -6,6 +6,7 @@ import BaiTapDungLayout from './BaiTapDungLayout/BaiTapDungLayout';
 import SinhVien from './DataBinding/SinhVien';
 import Event from './DataBinding/Event';
 import DieuKien from './CauTrucDieuKhien/DieuKien';
+import BaiTapState from './CauTrucDieuKhien/BaiTapState';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       {/* <BaiTapDungLayout/> */}
       {/* <SinhVien/> */}
       {/* <Event/> */}
-      <DieuKien/>
+      {/* <DieuKien/> */}
+      <BaiTapState/>
     </div>
   );
 }
