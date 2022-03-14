@@ -1,0 +1,7 @@
+1 đối tượng
+    - Thuộc tính (property) ==> Thay đổi giá trị thuộc tính ==> Giao diện thay đổi
+    - Phương thức (method)
+
+1 component là 1 thẻ đặc biệt do mình tạo ra <BaiTapVongLap>
+    - Thuộc tính : this.state, this.props
+    - Phương thức : constructor, renderMangPhim, render, setState, lifecycle
