@@ -10,11 +10,13 @@ import BaiTapState from './CauTrucDieuKhien/BaiTapState';
 import DemoVongLap from './CauTrucLap/DemoVongLap';
 import DuyetDanhSachPhim from './BapTapDungMap/DuyetDanhSachPhim';
 import DemoProps from './Props/DemoProps';
+import BaiTapTruyenFunction from './Props/BaiTapTruyenFunction/BaiTapTruyenFunction';
+import BaiTapGioHang from './Props/BaiTapGioHang/BaiTapGioHang';
 
 function App() {
   return (
     <div className="App">
-      <BaiTapDungLayout/>
+      {/* <BaiTapDungLayout/> */}
       {/* <SinhVien/> */}
       {/* <Event/> */}
       {/* <DieuKien/> */}
@@ -22,6 +24,8 @@ function App() {
       {/* <DemoVongLap/> */}
       {/* <DuyetDanhSachPhim/> */}
       {/* <DemoProps/> */}
+      {/* <BaiTapTruyenFunction/> */}
+      <BaiTapGioHang/>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class ProductItem extends Component {
   render() {
-    const {sanPhamOut} = this.props;
+    const {sanPhamOut,xemChiTiet} = this.props;
     return (
       <div className="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-lg-3">
         <div className="container">
@@ -19,7 +19,9 @@ export default class ProductItem extends Component {
                 iPhone X features a new all-screen design. Face ID, which makes
                 your face your password
               </p>
-              <a href="#" className="btn btn-primary">
+              <a href="#" className="btn btn-primary mr-2" data-toggle="modal" data-target="#modelId" onClick={()=>{
+                  {xemChiTiet(sanPhamOut)}
+                }}>
                 Detail
               </a>
               <a href="#" className="btn btn-danger">

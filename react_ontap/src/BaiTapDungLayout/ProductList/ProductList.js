@@ -7,10 +7,10 @@ export default class ProductList extends Component {
 
   renderSanPham = () => {
     //Lấy giá trị từ mangSanPham ở component cha truyền vào thông qua thuộc tính this.props
-    let { mangSanPham } = this.props;
+    let { mangSanPham, xemChiTiet } = this.props;
     return mangSanPham.map((sanPham, index) => {
       return (
-        <ProductItem key={index} sanPhamOut={sanPham}>
+        <ProductItem key={index} sanPhamOut={sanPham} xemChiTiet={xemChiTiet}>
         </ProductItem>
       )
     })
