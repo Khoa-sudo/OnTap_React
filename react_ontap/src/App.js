@@ -26,8 +26,8 @@ function App() {
       {/* <DuyetDanhSachPhim/> */}
       {/* <DemoProps/> */}
       {/* <BaiTapTruyenFunction/> */}
-      {/* <BaiTapGioHang/> */}
-      <BaiTapGameXucXac/>
+      <BaiTapGioHang/>
+      {/* <BaiTapGameXucXac/> */}
     </div>
   );
 }

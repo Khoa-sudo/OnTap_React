@@ -5,8 +5,6 @@ export default class SanPhamGioHang extends Component {
   render() {
     const { sanPham, themGioHang } = this.props;
     return (
-
-
       <div className="card text-white bg-dark">
         <img className="card-img-top" src={sanPham.hinhAnh} alt="..." width={200} height={400} />
         <div className="card-body">
