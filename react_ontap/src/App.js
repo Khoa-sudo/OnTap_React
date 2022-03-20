@@ -12,6 +12,7 @@ import DuyetDanhSachPhim from './BapTapDungMap/DuyetDanhSachPhim';
 import DemoProps from './Props/DemoProps';
 import BaiTapTruyenFunction from './Props/BaiTapTruyenFunction/BaiTapTruyenFunction';
 import BaiTapGioHang from './Props/BaiTapGioHang/BaiTapGioHang';
+import BaiTapGameXucXac from './BaiTapGameXucXac/BaiTapGameXucXac';
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
       {/* <DuyetDanhSachPhim/> */}
       {/* <DemoProps/> */}
       {/* <BaiTapTruyenFunction/> */}
-      <BaiTapGioHang/>
+      {/* <BaiTapGioHang/> */}
+      <BaiTapGameXucXac/>
     </div>
   );
 }
