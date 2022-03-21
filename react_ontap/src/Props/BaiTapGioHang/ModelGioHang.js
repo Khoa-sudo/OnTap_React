@@ -4,7 +4,7 @@ export default class ModelGioHang extends Component {
   render() {
       const { gioHang, xoaGioHang, tangGiamSoLuong } = this.props;
     return (
-      <div className="container">
+      <div>
         {/* Modal */}
         <div
           className="modal fade"
@@ -17,7 +17,7 @@ export default class ModelGioHang extends Component {
           <div className="modal-dialog" role="document">
             <div
               className="modal-content"
-              style={{ maxWidth: "800px", width: "800px" }}
+              style={{ maxWidth: "1000px", width: "1000px" }}
             >
               <div className="modal-header">
                 <h5 className="modal-title">Giỏ hàng</h5>

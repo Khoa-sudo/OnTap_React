@@ -13,6 +13,7 @@ import DemoProps from './Props/DemoProps';
 import BaiTapTruyenFunction from './Props/BaiTapTruyenFunction/BaiTapTruyenFunction';
 import BaiTapGioHang from './Props/BaiTapGioHang/BaiTapGioHang';
 import BaiTapGameXucXac from './BaiTapGameXucXac/BaiTapGameXucXac';
+import BTGioHangRedux from './components/BaiTapRedux/BaiTapGioHang/BTGioHangRedux';
 
 function App() {
   return (
@@ -26,8 +27,9 @@ function App() {
       {/* <DuyetDanhSachPhim/> */}
       {/* <DemoProps/> */}
       {/* <BaiTapTruyenFunction/> */}
-      <BaiTapGioHang/>
+      {/* <BaiTapGioHang/> */}
       {/* <BaiTapGameXucXac/> */}
+      <BTGioHangRedux/>
     </div>
   );
 }
