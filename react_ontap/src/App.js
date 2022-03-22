@@ -14,6 +14,7 @@ import BaiTapTruyenFunction from './Props/BaiTapTruyenFunction/BaiTapTruyenFunct
 import BaiTapGioHang from './Props/BaiTapGioHang/BaiTapGioHang';
 import BaiTapGameXucXac from './BaiTapGameXucXac/BaiTapGameXucXac';
 import BTGioHangRedux from './components/BaiTapRedux/BaiTapGioHang/BTGioHangRedux';
+import BaiTapForm from './BaiTapForm/BaiTapForm';
 
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
       {/* <BaiTapTruyenFunction/> */}
       {/* <BaiTapGioHang/> */}
       {/* <BaiTapGameXucXac/> */}
-      <BTGioHangRedux/>
+      {/* <BTGioHangRedux/> */}
+      <BaiTapForm/>
     </div>
   );
 }
