@@ -29,9 +29,9 @@ function App() {
       {/* <DemoProps/> */}
       {/* <BaiTapTruyenFunction/> */}
       {/* <BaiTapGioHang/> */}
-      {/* <BaiTapGameXucXac/> */}
+      <BaiTapGameXucXac/>
       {/* <BTGioHangRedux/> */}
-      <BaiTapForm/>
+      {/* <BaiTapForm/> */}
     </div>
   );
 }

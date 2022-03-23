@@ -1,3 +1,9 @@
+/*
+    Các file css khi start ứng dụng thì cấu trúc thư mục sẽ bị thay đổi
+    --> Vì thế các thuộc tính về background-img hoặc font-face... đường dẫn
+        sẽ bị thay đổi
+*/
+
 @font-face {
     font-family: fontGame;
     src:url('../../src/assets/BaiTapGameXucXac/Font/Pony.ttf')

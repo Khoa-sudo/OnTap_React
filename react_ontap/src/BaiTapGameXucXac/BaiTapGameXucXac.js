@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import KetQua from './KetQua'
+import KetQuaTroChoi from './KetQuaTroChoi'
 import XucXac from './XucXac'
 import style from './BaiTapGameXucXac.module.css'
 
@@ -12,7 +12,7 @@ export default class BaiTapGameXucXac extends Component {
 
                 <XucXac />
 
-                <KetQua />
+                <KetQuaTroChoi />
             </div>
         )
     }

@@ -10,6 +10,16 @@ const stateSinhVien = {
 };
 
 export const QuanLySinhVienReducer = (state = stateSinhVien, action) => {
-    console.log(action);
-  return { ...state };
+  switch (action.type) {
+    case "THEM_SINH_VIEN": {
+      //Thêm dữ liệu sinh viên vào mangSinhVien
+      const mangSVUpdate = [...state.mangSinhVien,action.sinhVien];
+      state.mangSinhVien = mangSVUpdate;
+      return {...state}      
+    };break;
+
+    default: {
+      return { ...state };
+    }
+  }
 };
