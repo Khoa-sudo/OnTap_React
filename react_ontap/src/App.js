@@ -15,6 +15,8 @@ import BaiTapGioHang from './Props/BaiTapGioHang/BaiTapGioHang';
 import BaiTapGameXucXac from './BaiTapGameXucXac/BaiTapGameXucXac';
 import BTGioHangRedux from './components/BaiTapRedux/BaiTapGioHang/BTGioHangRedux';
 import BaiTapForm from './BaiTapForm/BaiTapForm';
+import ReactLifeCycle from './ReactLifeCycle/ReactLifeCycle';
+import AxiosDemo from './AxiosDemo/AxiosDemo';
 
 function App() {
   return (
@@ -29,9 +31,11 @@ function App() {
       {/* <DemoProps/> */}
       {/* <BaiTapTruyenFunction/> */}
       {/* <BaiTapGioHang/> */}
-      <BaiTapGameXucXac/>
+      {/* <BaiTapGameXucXac/> */}
       {/* <BTGioHangRedux/> */}
       {/* <BaiTapForm/> */}
+      {/* <ReactLifeCycle/> */}
+      <AxiosDemo/>
     </div>
   );
 }
