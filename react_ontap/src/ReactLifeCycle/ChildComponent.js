@@ -34,7 +34,7 @@ export default class ChildComponent extends PureComponent {
   }
 
   componentDidMount() {
-    
+    //
     this.timeOut = setInterval(() => {
       console.log("123");
     }, 1000);

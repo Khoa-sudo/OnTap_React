@@ -24,7 +24,7 @@ export default class AxiosDemo extends Component {
     });
   };
   //Sau khi render giao diện thì thực thi
-  componentDidMount(){
+  componentDidMount() {
     this.getApi();
   }
   render() {
