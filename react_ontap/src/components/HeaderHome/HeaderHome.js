@@ -58,12 +58,15 @@ export default class HeaderHome extends Component {
               <div className="dropdown-menu" aria-labelledby="dropdownId">
                 <NavLink className="dropdown-item" to="/hookusestate">
                   Use State
+                </NavLink>               
+                <NavLink className="dropdown-item" to="/hookuseeffect">
+                  Use Effect
                 </NavLink>
-                <NavLink className="dropdown-item" to="/baitapchonxeusestate">
-                  BT Chọn Xe
+                <NavLink className="dropdown-item" to="/hookusecallback">
+                  Use Callback
                 </NavLink>
-                <NavLink className="dropdown-item" to="#">
-                  Action 2
+                <NavLink className="dropdown-item" to="/hookusememo">
+                  Use Memo
                 </NavLink>
               </div>
             </li>

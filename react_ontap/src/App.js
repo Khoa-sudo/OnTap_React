@@ -28,13 +28,15 @@ import HeaderHome from "./components/HeaderHome/HeaderHome";
 import Detail from "./pages/Detail/Detail";
 import AdminIndex from "./pages/Admin/AdminIndex/AdminIndex";
 import HookUseState from "./HookReact/HookUseState/HookUseState";
-import BT_ChonXeUseState from "./HookReact/BT_ChonXeUseState/BT_ChonXeUseState";
+import HookUseEffect from "./HookReact/HookUseEffect/HookUseEffect";
+import ParentComponent from "./HookReact/HookUseCallback/ParentComponent";
+import HookUseMemoRFC from "./HookReact/HookUseMemo/HookUseMemoRFC";
 
 function App() {
   return (
     <BrowserRouter>
-    <HeaderHome/>
- 
+      <HeaderHome />
+
       <Switch>
         <Route exact path={"/home"} component={Home} />
         <Route exact path={"/contact"} component={Contact} />
@@ -44,8 +46,10 @@ function App() {
         <Route exact path={"/detail/:id"} component={Detail} />
         <Route exact path={"/admin"} component={AdminIndex} />
         <Route exact path={"/hookusestate"} component={HookUseState} />
-        <Route exact path={"/baitapchonxeusestate"} component={BT_ChonXeUseState} />
-        
+        <Route exact path={"/hookuseeffect"} component={HookUseEffect} />
+        <Route exact path={"/hookusecallback"} component={ParentComponent} />
+        <Route exact path={"/hookusememo"} component={HookUseMemoRFC} />
+
 
         <Route exact path={"/"} component={Home} />
       </Switch>
