@@ -31,6 +31,8 @@ import HookUseState from "./HookReact/HookUseState/HookUseState";
 import HookUseEffect from "./HookReact/HookUseEffect/HookUseEffect";
 import ParentComponent from "./HookReact/HookUseCallback/ParentComponent";
 import HookUseMemoRFC from "./HookReact/HookUseMemo/HookUseMemoRFC";
+import HookRedux from "./HookReact/HookRedux/HookRedux";
+import ToDoList from "./HookReact/ToDoList/ToDoList";
 
 function App() {
   return (
@@ -49,6 +51,8 @@ function App() {
         <Route exact path={"/hookuseeffect"} component={HookUseEffect} />
         <Route exact path={"/hookusecallback"} component={ParentComponent} />
         <Route exact path={"/hookusememo"} component={HookUseMemoRFC} />
+        <Route exact path={"/hookredux"} component={HookRedux} />
+        <Route exact path={"/todolist"} component={ToDoList} />
 
 
         <Route exact path={"/"} component={Home} />

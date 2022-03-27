@@ -68,6 +68,12 @@ export default class HeaderHome extends Component {
                 <NavLink className="dropdown-item" to="/hookusememo">
                   Use Memo
                 </NavLink>
+                <NavLink className="dropdown-item" to="/hookredux">
+                  Hook Redux
+                </NavLink>
+                <NavLink className="dropdown-item" to="/todolist">
+                  To Do List
+                </NavLink>
               </div>
             </li>
           </ul>
