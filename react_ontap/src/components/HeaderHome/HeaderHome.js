@@ -44,6 +44,11 @@ export default class HeaderHome extends Component {
                 Login
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink exact activeClassName="bg-white text-dark" className="nav-link" to="/demohocmodal">
+                DemoHOC
+              </NavLink>
+            </li>
             <li className="nav-item dropdown">
               <NavLink
                 className="nav-link dropdown-toggle"

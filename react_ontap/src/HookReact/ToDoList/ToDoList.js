@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
-import { GetAllTaskAction } from "../../redux/actions/toDoListAction";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  deleteTaskAction,
+  rejectTaskAction,
+  doneTaskAction,
+  addTaskApiAction,
+  getAllTaskAction,
+} from "../../redux/actions/toDoListAction";
+
 export default function ToDoList() {
   // const [arrTask, setArrTask] = useState([]);
   const [task, setTask] = useState({ taskName: "", status: false });
@@ -10,17 +17,16 @@ export default function ToDoList() {
   const { arrTask } = useSelector((rootReducer) => rootReducer.toDoListReducer);
   const dispatch = useDispatch();
 
-  useEffect(async () => {
+  useEffect(() => {
     //dispatch 1 action là function
     /**
      * action có 2 loại:
      * + Loại 1: {type:"",payload:data}
      * + Loại 2: function
      */
-    let action = GetAllTaskAction();
+    let action = getAllTaskAction();
     dispatch(action);
   }, []);
-  console.log("task", task);
   const handleChangeInput = (e) => {
     let { value, name } = e.target;
     setTask({
@@ -30,14 +36,26 @@ export default function ToDoList() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    // call api
+    //Khi gọi hàm addTaskApiAction => Hàm chưa gọi
+    const action = addTaskApiAction(task);
+
+    dispatch(action);
+
+    //Nếu làm theo cách bình thuòng
+    //Gọi axios thêm
+    //lấy dữ liệu về => dispatch lên reducer xử lý
+    //Gọi axios getAll
+    // dispatch giá trị sau khi getAll cho reducer xử lý
   };
-  //call API de lấy task về
+
   return (
     <div className="container">
       <div className="d-flex justify-content-center align-items-center">
         <div>
           <h3 className="text-center display-4">To do list</h3>
-          <div className="input-group mb-3">
+
+          <form className="input-group mb-3" onSubmit={handleSubmit}>
             <input
               name="taskName"
               onChange={handleChangeInput}
@@ -56,7 +74,7 @@ export default function ToDoList() {
                 Add task
               </button>
             </div>
-          </div>
+          </form>
 
           <table className="table">
             <tbody>
@@ -72,8 +90,24 @@ export default function ToDoList() {
                         <span className="badge badge-success">completed</span>
                       </td>
                       <td>
-                        <button className="btn btn-success">done</button>
-                        <button className="btn btn-danger ml-2">delete</button>
+                        <button
+                          onClick={() => {
+                            const action = rejectTaskAction(task.taskName);
+                            dispatch(action);
+                          }}
+                          className="btn btn-warning"
+                        >
+                          undo
+                        </button>
+                        <button
+                          onClick={() => {
+                            const action = deleteTaskAction(task.taskName);
+                            dispatch(action);
+                          }}
+                          className="btn btn-danger ml-2"
+                        >
+                          delete
+                        </button>
                       </td>
                     </tr>
                   );
@@ -93,8 +127,25 @@ export default function ToDoList() {
                         <span className="badge badge-danger">incompleted</span>
                       </td>
                       <td>
-                        <button className="btn btn-warning">undo</button>
-                        <button className="btn btn-danger ml-2">delete</button>
+                        <button
+                          onClick={() => {
+                            const action = doneTaskAction(task.taskName);
+                            dispatch(action);
+                          }}
+                          className="btn btn-success"
+                        >
+                          done
+                        </button>
+
+                        <button
+                          onClick={() => {
+                            const action = deleteTaskAction(task.taskName);
+                            dispatch(action);
+                          }}
+                          className="btn btn-danger ml-2"
+                        >
+                          delete
+                        </button>
                       </td>
                     </tr>
                   );

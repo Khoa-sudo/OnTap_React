@@ -33,6 +33,8 @@ import ParentComponent from "./HookReact/HookUseCallback/ParentComponent";
 import HookUseMemoRFC from "./HookReact/HookUseMemo/HookUseMemoRFC";
 import HookRedux from "./HookReact/HookRedux/HookRedux";
 import ToDoList from "./HookReact/ToDoList/ToDoList";
+import DemoHOCModal from "./HOC/DemoHOCModal/DemoHOCModal";
+import ModalHOC from "./HOC/DemoHOCModal/ModalHOC";
 
 function App() {
   return (
@@ -53,10 +55,14 @@ function App() {
         <Route exact path={"/hookusememo"} component={HookUseMemoRFC} />
         <Route exact path={"/hookredux"} component={HookRedux} />
         <Route exact path={"/todolist"} component={ToDoList} />
+        <Route exact path={"/demohocmodal"} component={DemoHOCModal} />
 
 
         <Route exact path={"/"} component={Home} />
       </Switch>
+
+      {/* Xài toàn bộ ứng dụng */}
+      <ModalHOC/>
     </BrowserRouter>
   );
 }
